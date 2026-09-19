@@ -1,7 +1,6 @@
-let gesamtbetrag = 0; /* NEU */
+let total = 0;
 
-function artikelHinzufuegen(name, preis) {
-  /* NEU */
-  gesamtbetrag = gesamtbetrag + preis;
-  console.log(gesamtbetrag);
+function addItemToOrder(name, price) {
+  total = total + price;
+  console.log("Der Gesamtpreis liegt bei " + total + " €");
 }

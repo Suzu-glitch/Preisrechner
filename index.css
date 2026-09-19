@@ -19,26 +19,26 @@ body {
   gap: 20px;
 }
 
-.produkte-container {
+.products-container {
   width: 540px;
   background-color: #ffffff;
   border-radius: 8px;
   padding: 30px;
 }
 
-.produkte-container h1 {
+.products-container h1 {
   font-size: 28px;
   margin-bottom: 20px;
 }
 
-.produkte-grid {
+.products-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   margin-bottom: 20px;
 }
 
-.artikel {
+.item {
   border: 1px solid #ccc;
   border-radius: 6px;
   background-color: #f5f5f5;
@@ -50,12 +50,12 @@ body {
   cursor: pointer;
 }
 
-.artikel-name {
+.item-name {
   font-size: 14px;
   color: #000;
 }
 
-.artikel-preis {
+.item-price {
   font-size: 15px;
   font-weight: bold;
   color: #2266cc;
@@ -67,19 +67,19 @@ hr {
   margin-bottom: 20px;
 }
 
-.gesamt-zeile {
+.total-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.gesamt-label {
+.total-label {
   font-size: 18px;
   font-weight: bold;
 }
 
-.gesamt-wert {
+.total-value {
   font-size: 22px;
   font-weight: bold;
   color: #2266cc;
@@ -91,8 +91,8 @@ hr {
   margin-bottom: 15px;
 }
 
-.btn-rueckgaengig,
-.btn-alles-loeschen {
+.btn-undo,
+.btn-clear-all {
   flex: 1;
   padding: 14px;
   border: none;
@@ -102,21 +102,21 @@ hr {
   cursor: pointer;
 }
 
-.btn-rueckgaengig {
+.btn-undo {
   background-color: #e0a030;
 }
 
-.btn-alles-loeschen {
+.btn-clear-all {
   background-color: #cc4433;
 }
 
-.bestellart-buttons {
+.order-type-buttons {
   display: flex;
   gap: 15px;
 }
 
-.btn-vor-ort,
-.btn-lieferung {
+.btn-in-house,
+.btn-delivery {
   flex: 1;
   padding: 14px;
   border: none;
@@ -126,27 +126,27 @@ hr {
   cursor: pointer;
 }
 
-.btn-vor-ort {
+.btn-in-house {
   background-color: #33aa55;
 }
 
-.btn-lieferung {
+.btn-delivery {
   background-color: #2266cc;
 }
 
-.bestellung-container {
+.order-container {
   width: 260px;
   background-color: #ffffff;
   border-radius: 8px;
   padding: 30px;
 }
 
-.bestellung-container h2 {
+.order-container h2 {
   font-size: 22px;
   margin-bottom: 15px;
 }
 
-.bestellung-liste {
+.order-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
