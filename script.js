@@ -24,6 +24,7 @@ function checkoutInHouse() {
       total.toFixed(2).replace(".", ",") +
       " €",
   );
+  resetOrder();
 }
 
 function checkoutDelivery() {
@@ -37,16 +38,16 @@ function checkoutDelivery() {
     return;
   }
 
-  total = total + 2.5;
-  updateTotal();
+  addItemToOrder("Lieferung", 2.5);
+
   alert(
     "Bestellung für Lieferung abgeschlossen! Gesamtbetrag inkl. 2,50 € Lieferkosten: " +
       total.toFixed(2).replace(".", ",") +
       " €",
   );
+  resetOrder();
 }
-document.getElementById("inhouse").addEventListener("click", checkoutInHouse);
-document.getElementById("delivery").addEventListener("click", checkoutDelivery);
+
 function undoLastItem() {
   if (lastPrice === 0) {
     return;
@@ -67,5 +68,3 @@ function resetOrder() {
   document.querySelector(".order-list").innerHTML = "";
   lastPrice = 0;
 }
-document.getElementById("undo").addEventListener("click", undoLastItem);
-document.getElementById("reset").addEventListener("click", resetOrder);
