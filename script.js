@@ -9,15 +9,16 @@ function addItemToOrder(name, price) {
   lastPrice = price;
 }
 function updateTotal() {
-  const totalValue = document.querySelector(".total-value");
-  totalValue.innerHTML = total.toFixed(2).replace(".", ",") + " €";
+  const totalValueEl = document.querySelector(".total-value");
+  totalValueEl.innerHTML = total.toFixed(2).replace(".", ",") + " €";
 }
 
 function addOrderListItem(name, price) {
-  const orderList = document.querySelector(".order-list");
-  orderList.innerHTML +=
+  const orderListEl = document.querySelector(".order-list");
+  orderListEl.innerHTML +=
     "<div>" + name + ": " + price.toFixed(2).replace(".", ",") + " €</div>";
 }
+
 function checkoutInHouse() {
   alert(
     "Bestellung für Vor Ort abgeschlossen! Gesamtbetrag: " +
@@ -56,8 +57,8 @@ function undoLastItem() {
   total = total - lastPrice;
   updateTotal();
 
-  const orderList = document.querySelector(".order-list");
-  orderList.lastElementChild.remove();
+  const orderListEl = document.querySelector(".order-list");
+  orderListEl.lastElementChild.remove();
 
   lastPrice = 0;
 }
