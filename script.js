@@ -64,6 +64,11 @@ function undoLastItem() {
 }
 
 function resetOrder() {
+  const confirmed = confirm("Möchtest du die Bestellung wirklich löschen?");
+  if (!confirmed) {
+    return;
+  }
+
   total = 0;
   updateTotal();
   document.querySelector(".order-list").innerHTML = "";
